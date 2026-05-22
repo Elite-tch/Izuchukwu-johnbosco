@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { DarkThemeToggle } from "flowbite-react";
+import DarkThemeToggle from './DarkThemeToggle';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -19,7 +19,7 @@ export default function NavBar() {
           <div className='flex justify-between items-center w-[90%] mx-auto'>
             <h2 className="text-3xl font-bold">John<span className='text-[#f25c34]'>Bosco</span></h2>
             <div className="md:hidden flex items-center gap-3 justify-center">
-            <DarkThemeToggle className='mt-0 !outline-none !border-none !ring-0 !ring-offset-0 !shadow-none hover:!bg-transparent active:!bg-transparent focus:!bg-transparent dark:!bg-transparent dark:hover:!bg-transparent hover:!border-none focus:!border-none active:!border-none dark:!border-none dark:hover:!border-none dark:!outline-none dark:focus:!ring-0 dark:active:!outline-none' />
+            <DarkThemeToggle className='mt-0' />
     
               <button onClick={toggleSidebar} className="text-3xl">
                 &#9776;
@@ -38,7 +38,7 @@ export default function NavBar() {
               <button className="bg-[#f25c34] hover:bg-[#1D1753] dark:hover:bg-[#f25c34]/80 dark:bg-[#f25c34] text-white md:px-4 px-3 py-2 rounded-md">
                 <Link href="https://www.canva.com/design/DAGsxvI1dTU/pZeyzvbBhAXnT1pDLj9KyA/view?utm_content=DAGsxvI1dTU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h082deae10c"  target="_blank" rel="noopener noreferrer">Download CV</Link>
               </button>
-              <DarkThemeToggle className='md:ml-6 !outline-none !border-none !ring-0 !ring-offset-0 !shadow-none hover:!bg-transparent active:!bg-transparent focus:!bg-transparent dark:!bg-transparent dark:hover:!bg-transparent hover:!border-none focus:!border-none active:!border-none dark:!border-none dark:hover:!border-none dark:!outline-none dark:focus:!ring-0 dark:active:!outline-none' />
+              <DarkThemeToggle className='md:ml-6' />
             </div>
           </div>
         </nav>
@@ -75,7 +75,7 @@ export default function NavBar() {
                   <button className="hover:bg-[#1D1753] bg-[#f25c34] dark:bg[#f25c34] w-fit text-white px-4 py-2 rounded-md">
                     <Link href="https://www.canva.com/design/DAGsxvI1dTU/pZeyzvbBhAXnT1pDLj9KyA/view?utm_content=DAGsxvI1dTU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h082deae10c" target="_blank" rel="noopener noreferrer">Download CV</Link>
                   </button>
-                  <DarkThemeToggle className='mt-4 !outline-none !border-none !ring-0 !ring-offset-0 !shadow-none hover:!bg-transparent active:!bg-transparent focus:!bg-transparent dark:!bg-transparent dark:hover:!bg-transparent hover:!border-none focus:!border-none active:!border-none dark:!border-none dark:hover:!border-none dark:!outline-none dark:focus:!ring-0 dark:active:!outline-none' />
+                  <DarkThemeToggle className='mt-4' />
                 </ul>
               </motion.div>
             </>

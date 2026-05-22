@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeModeScript } from "flowbite-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,7 +53,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <head>
-        <ThemeModeScript />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
         {/* Favicon and Apple Touch Icon */}
         <link rel="icon" href="/logo1.png" type="image/png" />
         <link rel="apple-touch-icon" href="/logo1.png" />
