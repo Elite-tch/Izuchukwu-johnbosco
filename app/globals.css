@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "flowbite";
 
 .nav {
   background: radial-gradient(circle at top left, #e83b0c, #000000 60%);

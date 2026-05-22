@@ -1,25 +1,20 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 import { FaMapMarkerAlt } from 'react-icons/fa';
-import 'aos/dist/aos.css';
-import AOS from 'aos';
+import { motion } from 'framer-motion';
+
 export default function HeroPage() {
-     useEffect(() => {
-          AOS.init({
-               duration: 1200,  // Animation duration in milliseconds
-               delay: 300,      // Delay before animation starts
-               once: false,     // Allows the animation to happen multiple times
-               mirror: true     // Triggers animation when scrolling up
-             });
-             
-      }, []);
     return (
-        <section id="home" className="pt-[30%] md:pt-[10%] pb-[6%] border-b   overflow-x-hidden  dark:border-gray-700">
+        <section id="home" className="pt-[30%] md:pt-[10%] pb-[6%]  overflow-x-hidden  dark:border-gray-700">
             <div className="w-[90%] mx-auto flex justify-between items-center md:flex-row flex-col md:gap-0 gap-14">
               
-            <div data-aos="fade-right" className="t w-[95%] flex flex-col gap-3">
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+              className="t w-[95%] flex flex-col gap-3"
+            >
               <h3 className="flex items-center md:pl-28  gap-3"><span className="text-3xl">Hi </span>
               <Image src='/hand.gif'  alt='' width={80} height={80}/>
               </h3>
@@ -46,7 +41,7 @@ export default function HeroPage() {
 </div>
 
 </div> 
-              </div>  
+              </motion.div>  
 
             {/*  <div data-aos="zoom-in" className="">
               <Image src='https://res.cloudinary.com/dibwnfwk9/image/upload/v1737093938/concept119_773186-441_pmmlag.avif' alt='' width={650} height={350} className="h-[100%] rounded-xl"/>

@@ -1,6 +1,7 @@
 'use client'
 import { useForm, ValidationError } from '@formspree/react';
 import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("mjkkzoyr");
   if (state.succeeded) {
@@ -8,7 +9,13 @@ export default function ContactForm() {
   }
   return (
     <section id='contact' className='bg-white     dark:bg-[#000000] dark:text-gray-200 text-[#1D1753]  pt-[5%]'>
-<div data-aos="zoom-in" className='md:w-[95%] w-[90%] mx-auto'>
+<motion.div 
+  initial={{ opacity: 0, scale: 0.95 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  viewport={{ once: true, margin: "-100px" }}
+  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+  className='md:w-[95%] w-[90%] mx-auto'
+>
 <h2 className="text-[#f25c34] text-2xl text-center">Get in Touch</h2>
 <h1 className="font-semibold text-3xl md:text-4xl pt-3 text-center">Got questions or idea? Reach out!</h1>
 
@@ -67,7 +74,7 @@ export default function ContactForm() {
       </div>
     </form>
 
-    </div>
+</motion.div>
     <footer className="text-center py-4 mt-8 md:mt-16 border-t dark:border-gray-700">
   <p>&copy; {new Date().getFullYear()} JBTech<span className='text-[#f25c34]'>-Solutions</span> All rights reserved.</p>
 </footer>

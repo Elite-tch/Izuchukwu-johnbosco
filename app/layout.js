@@ -13,31 +13,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "JBTech Solutions | Innovative Web Solutions & Development",
+  title: "Izuchukwu Johnbosco | Software Developer",
   description:
-    "JBTech Solutions specializes in building modern web applications, blockchain solutions, and digital products to drive business growth.",
+    "Izuchukwu Johnbosco specializes in building modern web applications, blockchain solutions, and digital products to drive business growth.",
   keywords:
-    "JBTech Solutions, web development, blockchain solutions, front-end development, React, Next.js, crypto payment systems, UI/UX design",
+    "Izuchukwu Johnbosco, web development, blockchain solutions, front-end development, React, Next.js, crypto payment systems, UI/UX design",
   authors: [{ name: "JBTech Solutions", url: "https://jbtsolutions.vercel.app/" }],
   openGraph: {
-    title: "JBTech Solutions | Innovative Web Solutions",
+    title: "Izuchukwu Johnbosco | Software Developer",
     description:
       "Expert web development and blockchain integration services tailored for modern businesses.",
     url: "https://jbtsolutions.vercel.app/",
-    siteName: "JBTech Solutions",
+    siteName: "zuchukwu Johnbosco",
     images: [
       {
         url: "/logo1.png",
         width: 1200,
         height: 630,
-        alt: "JBTech Solutions - Innovative Web Solutions",
+        alt: "Izuchukwu Johnbosco | Software Developer",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "JBTech Solutions | Innovative Web Solutions",
+    title: "Izuchukwu Johnbosco | Software Developer",
     description:
       "Expert web development and blockchain integration services tailored for modern businesses.",
     creator: "@JBTech Solutions",
