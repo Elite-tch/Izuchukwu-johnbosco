@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const aosVariants = {
@@ -22,9 +22,25 @@ const aosVariants = {
   },
 };
 
-// Project data
 const allProjects = [
-  // Web3 Projects
+  {
+    title: 'Savique',
+    category: 'web3',
+    video: "https://res.cloudinary.com/dibwnfwk9/video/upload/v1782480948/202605251138_c1oggv.mp4",
+    live: ' https://devnetnet.savique.xyz',
+    description: 'Savique is a goal-based USDC savings protocol on Arbitrum with Aave yield integration, time-locked vaults, a 10% early-withdrawal penalty, and a Proof of Solvency feature for sharing verified on-chain savings history',
+    tech: ['Next.js', 'TypeScript', 'Solidity', 'Arbitrum', 'Aave', 'Tailwind'],
+    aos: 'zoom-in',
+  },
+  {
+    title: 'ShipMarket',
+    category: 'web3',
+    video:"https://res.cloudinary.com/dibwnfwk9/video/upload/v1782482336/shipp_cdq8mo.mp4",
+    live: 'https://ship-market.vercel.app/',
+    description: 'ShipMarket is a decentralized digital marketplace on Solana for buying and selling digital products, featuring a $SHIP SPL token and a tiered loyalty system with discounts up to 40% for top-tier holders.',
+    tech: ['Next.Js', 'Solana', 'Anchor', 'Tailwind CSS'],
+    aos: 'zoom-in',
+  },
   {
     title: 'MetroFund',
     category: 'web3',
@@ -37,20 +53,36 @@ const allProjects = [
   {
     title: 'FlareStudio',
     category: 'web3',
-    video: null, // No video available
+    video: null,
     live: 'https://www.flarestudio.xyz/',
     description: 'Developer toolkit and interactive playground for the Flare Network. Built as a multi-feature developer platform for exploring, learning, and building on the Flare blockchain. Includes dashboards, analytics, interactive RPC testing, and the ProofRails SDK for ISO 20022 compliant receipts.',
     tech: ['Next.Js', 'JavaScript', 'SDK', 'Flare Network'],
     aos: 'fade-up',
   },
-  
-  // Frontend / Web2 Projects
+  {
+    title: 'IdeaRadar',
+    category: 'frontend',
+    video: 'https://res.cloudinary.com/dibwnfwk9/video/upload/v1782480832/202606010950_chvkdq.mp4',
+    live: ' https://idearadar-pi.vercel.app',
+    description: 'IdeaRadar is an AI-powered startup idea validator using Qdrant vector search to surface similar companies and differentiation angles. Supports text input, document upload, and live URL analysis.',
+    tech: ['Next.js', 'TypeScript', 'Qdrant', 'Gemini AI'],
+    aos: 'fade-right',
+  },
+  {
+    title: 'Amadeus Agent Marketplace',
+    category: 'frontend',
+    video: 'https://res.cloudinary.com/dibwnfwk9/video/upload/v1782482324/amadus_pgeuir.mp4',
+    live: 'https://amadeus-agent-marketplace.vercel.app',
+    description: 'Amadeus is a decentralized marketplace for AI agents, enabling users to browse, deploy, and interact with blockchain-powered agents across categories including DeFi trading, automation, and gaming.',
+    tech: ['Next.Js', 'TypeScript', 'Tailwind'],
+    aos: 'fade-right',
+  },
   {
     title: 'Georenz',
     category: 'frontend',
     video: '/georenz.mp4',
     live: 'https://georenz.com/',
-    description: 'Georenz is a solar installation company that provides solar energy solutions to individuals and businesses. The website serves as a lead-generation platform showcasing the company’s services, expertise, and customer commitment.',
+    description: "Georenz is a solar installation company that provides solar energy solutions to individuals and businesses. The website serves as a lead-generation platform showcasing the company's services, expertise, and customer commitment.",
     tech: ['Next.Js', 'Framer Motion', 'Tailwind'],
     aos: 'fade-right',
   },
@@ -73,31 +105,13 @@ const allProjects = [
     aos: 'fade-right',
   },
   {
-    title: 'MediLink',
-    category: 'frontend',
-    video: 'https://res.cloudinary.com/dibwnfwk9/video/upload/v1736888840/WhatsApp_Video_2025-01-14_at_20.31.07_6ca8e5ca_wuhyne.mp4',
-    live: 'https://medi-link-tau.vercel.app/',
-    description: 'Medi Link is an innovative platform designed to connect healthcare professionals and patients seamlessly. As a frontend developer, I worked on creating a clean, intuitive user interface that allows easy navigation and interaction.',
-    tech: ['React.Js', 'Css', 'Tailwind'],
-    aos: 'fade-up',
-  },
-  {
     title: 'WorshipTogether',
     category: 'frontend',
     video: 'https://res.cloudinary.com/dibwnfwk9/video/upload/v1736887947/WhatsApp_Video_2025-01-14_at_20.31.10_53b29416_qu1wbk.mp4',
     live: 'https://worshipetogether.vercel.app',
-    description: 'Worship Together project is a platform designed for easy collaboration and sharing of worship resources. I created a clean, user-friendly interface to help users explore and organize worship materials seamlessly.',
+    description: 'Worship Together is a platform designed for easy collaboration and sharing of worship resources. I created a clean, user-friendly interface to help users explore and organize worship materials seamlessly.',
     tech: ['Next.Js', 'Css', 'Tailwind'],
     aos: 'zoom-out',
-  },
-  {
-    title: 'ShipMarket',
-    category: 'web3',
-    video: null,
-    live: 'https://ship-market.vercel.app/',
-    description: 'A high-fidelity, decentralized digital marketplace built on the Solana blockchain. Powered by the $SHIP token, it enables creators to list and sell premium Web3 resources while offering dynamic on-chain discounts based on user token holdings.',
-    tech: ['Next.Js', 'Solana', 'Anchor', 'Tailwind CSS'],
-    aos: 'zoom-in',
   },
 ];
 
@@ -105,21 +119,14 @@ export default function WorkPage() {
   const [activeTab, setActiveTab] = useState('frontend');
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
-  // Filter projects by active tab
+  const toggleDropdown = () => setIsOpen(!isOpen);
   const filteredProjects = allProjects.filter(p => p.category === activeTab);
-  
-  // Split into main and dropdown (show first 4, then the rest)
   const mainProjects = filteredProjects.slice(0, 4);
   const dropdownProjects = filteredProjects.slice(4);
 
-  // Switch tab handler
   const handleTabSwitch = (tab) => {
     setActiveTab(tab);
-    setIsOpen(false); // Reset dropdown when switching tabs
+    setIsOpen(false);
   };
 
   const renderProject = (project, idx) => {
@@ -138,8 +145,8 @@ export default function WorkPage() {
       >
         {project.video ? (
           <div className="rounded-md overflow-hidden bg-black flex items-center justify-center min-h-[200px] md:h-80">
-            <video className="md:h-80 w-full object-cover" autoPlay muted loop playsInline>
-              <source src={project.video} type="video/mp4" />
+            <video className="md:h-80 w-full object-center" autoPlay muted loop playsInline>
+              <source src={project.video} type="video/mp4"  />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -176,10 +183,8 @@ export default function WorkPage() {
   return (
     <section id='project' className='bg-white border-b dark:border-gray-700 dark:bg-[#000000] dark:text-gray-200 text-[#1D1753] py-[5%]'>
       <div className='w-[90%] mx-auto'>
-        <h2 className="text-[#f25c34] text-2xl text-center font-bold">Our Recent Projects</h2>
-        <h1 className="font-semibold text-3xl md:text-4xl pt-3 text-center mb-10">Innovative solutions we’ve delivered</h1>
+        <h2 className="text-[#f25c34] text-2xl md:text-3xl mb-6 text-center font-bold">My Recent Projects</h2>
         
-        {/* Tabs */}
         <div className="flex justify-center mb-12">
           <div className="inline-flex bg-gray-100 dark:bg-gray-900 rounded-full p-1 shadow-sm border border-gray-200 dark:border-gray-800">
             <button
@@ -209,14 +214,12 @@ export default function WorkPage() {
           {mainProjects.map((project, idx) => renderProject(project, idx))}
         </div>
         
-        {/* Dropdown projects */}
         {isOpen && dropdownProjects.length > 0 && (
           <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 transition-opacity duration-500'>
             {dropdownProjects.map((project, idx) => renderProject(project, idx))}
           </div>
         )}
         
-        {/* Toggle button */}
         {dropdownProjects.length > 0 && (
           <div className='flex justify-center pt-12'>
             <button

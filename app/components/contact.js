@@ -28,7 +28,7 @@ export default function ContactForm() {
               id="email"
               type="email"
               name="email"
-              className="w-[100%] focus:outline-none focus:ring-0 focus:border-[#1D1753] dark:focus:border-[#f25c34] dark:bg-gray-900"
+              className="w-[100%] focus:outline-none p-3 focus:ring-0 focus:border-[#1D1753] dark:focus:border-[#f25c34] dark:bg-gray-900"
 
             />
             <ValidationError

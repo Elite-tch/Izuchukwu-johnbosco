@@ -44,7 +44,7 @@ export default function About() {
           <h2 className='text-[#f25c34] text-2xl font-bold mb-2'>Who I Am</h2>
           <div className='text-sm flex flex-col gap-4 opacity-90 leading-relaxed'>
             <p>I am a passionate Frontend and Product Engineer with over three years of experience crafting high-quality web applications and robust developer tools. With a strong specialization in the Next.js ecosystem and Web3 integrations, I focus on creating intuitive user interfaces and seamless developer experiences through SDK-style abstractions.</p>
-            <p>Having successfully launched more than a dozen products—ranging from e-commerce platforms to decentralized applications—I thrive at the intersection of product design and technical execution. I am deeply committed to performance optimization, and I actively contribute to the tech community by organizing workshops and mentoring emerging developers.</p>
+            <p>Having successfully launched more than a dozen products, ranging from e-commerce platforms to decentralized applications, I thrive at the intersection of product design and technical execution. I am deeply committed to performance optimization.</p>
           </div>
           <div className='flex gap-5 mt-6'>
             <a href="https://x.com/IzuchukwuJ99034?t=C0oDZva2STQieP_PRp08Gg&s=09" target="_blank" rel="noopener noreferrer">

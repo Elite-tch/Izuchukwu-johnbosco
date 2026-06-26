@@ -43,9 +43,8 @@ const TechStack = () => {
         variants={containerVariants}
         className='w-[90%] mx-auto'
       >
-        <h2 className='text-[#f25c34] text-2xl'>Technical Expertise</h2>
-        <h1 className='font-semibold text-3xl md:text-4xl pt-3'>Tools & Technologies Powering My Creations</h1>
-
+        <h2 className='text-[#f25c34] text-2xl md:text-3xl mb-'>Technical Expertise</h2>
+        
         <div className="flex gap-4 md:gap-10 pt-6 md:pt-12 justify-center items-center flex-wrap">
           <motion.div variants={iconVariants}>
             <FaReact color="#61DBFB" className='text-6xl hover:scale-110 transition-transform duration-200' />

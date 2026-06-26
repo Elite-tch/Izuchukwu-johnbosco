@@ -1,29 +1,30 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const siteUrl = "https://jbtsolutions.vercel.app";
 
 export const metadata = {
-  title: "Izuchukwu Johnbosco | Software Developer",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Izuchukwu Johnbosco | Software Developer",
+    template: "%s | Izuchukwu Johnbosco",
+  },
   description:
-    "Izuchukwu Johnbosco specializes in building modern web applications, blockchain solutions, and digital products to drive business growth.",
+    "Izuchukwu Johnbosco builds modern web applications, blockchain solutions, and digital products with a focus on performance, usability, and clean engineering.",
   keywords:
-    "Izuchukwu Johnbosco, web development, blockchain solutions, front-end development, React, Next.js, crypto payment systems, UI/UX design",
-  authors: [{ name: "JBTech Solutions", url: "https://jbtsolutions.vercel.app/" }],
+    "Izuchukwu Johnbosco, frontend developer, web developer, Next.js developer, React developer, Web3 developer, blockchain solutions, UI engineering, portfolio",
+  applicationName: "Izuchukwu Johnbosco Portfolio",
+  authors: [{ name: "Izuchukwu Johnbosco", url: siteUrl }],
+  creator: "Izuchukwu Johnbosco",
+  publisher: "Izuchukwu Johnbosco",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Izuchukwu Johnbosco | Software Developer",
     description:
-      "Expert web development and blockchain integration services tailored for modern businesses.",
-    url: "https://jbtsolutions.vercel.app/",
-    siteName: "zuchukwu Johnbosco",
+      "Frontend and Web3 developer building protocol interfaces, developer tooling, and high-performance web applications.",
+    url: siteUrl,
+    siteName: "Izuchukwu Johnbosco",
     images: [
       {
         url: "/logo1.png",
@@ -39,17 +40,39 @@ export const metadata = {
     title: "Izuchukwu Johnbosco | Software Developer",
     description:
       "Expert web development and blockchain integration services tailored for modern businesses.",
-    creator: "@JBTech Solutions",
+    creator: "@JBTechSolutions",
     images: ["/logo1.png"],
   },
   icons: {
-    icon: "/logo1.png",             // Favicon (32x32 or 48x48)
-    shortcut: "/logo1.png",         // Shortcut icon
-    apple: "/logo1.png",   // Apple touch icon (180x180)
+    icon: "/logo1.png",
+    shortcut: "/logo1.png",
+    apple: "/logo1.png",
   },
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Izuchukwu Johnbosco",
+    url: siteUrl,
+    image: `${siteUrl}/logo1.png`,
+    jobTitle: "Software Developer",
+    sameAs: [
+      "https://github.com/Elite-tch",
+      "https://www.linkedin.com/in/izuchukwu-johnbosco-364657323",
+      "https://x.com/IzuchukwuJ99034",
+    ],
+    knowsAbout: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Web3",
+      "Blockchain Development",
+      "Frontend Engineering",
+    ],
+  };
+
   return (
     <html lang="en" className="dark">
       <head>
@@ -66,13 +89,12 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        {/* Favicon and Apple Touch Icon */}
-        <link rel="icon" href="/logo1.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo1.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         {children}
       </body>
     </html>

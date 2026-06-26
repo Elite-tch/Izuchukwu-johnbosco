@@ -3,7 +3,7 @@ import HeroPage from "./components/HeroPage";
 import ServicesCards from "./components/ServicesCards";
 import About from "./components/About";
 import TechStack from "./components/skill";
-import Experience from "./components/experience";
+//import Experience from "./components/experience";
 import WorkPage from "./components/Work";
 
 import ContactForm from "./components/contact"
@@ -17,7 +17,7 @@ export default function Home() {
       </div>
       <About />
       <TechStack />
-      <Experience />
+     
       <WorkPage />
       <ContactForm />
     </div>
