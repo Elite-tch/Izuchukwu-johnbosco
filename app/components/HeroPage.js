@@ -19,8 +19,8 @@ export default function HeroPage() {
               <Image src='/hand.gif'  alt='' width={80} height={80}/>
               </h3>
 <h1 className="text-5xl md:text-7xl font-bold text-center">I'm Johnbosco <span className="text-[#f25c34]">Izuchukwu</span></h1>
-<h2 className="text-2xl md:text-3xl font-bold text-center">Frontend & Web3 Developer</h2>
-<p className="text-center md:w-[70%] mx-auto">I build production-grade web applications and blockchain protocol interfaces,from DeFi savings vaults to developer tooling and client-facing web products.</p>
+<h2 className="text-2xl md:text-3xl font-bold text-center">Full-Stack Developer</h2>
+<p className="text-center md:w-[70%] mx-auto">I build end-to-end web products, from polished user experiences to secure backend services, data flows, and the tools that keep products running smoothly.</p>
      <div className="flex gap-4 mt-4 justify-center">
          <button className="bg-[#f25c34] dark:bg-transparent dark:border dark:hover:text-[#f25c34] hover:bg-[#1D1753]/90 dark:hover:border-[#f25c34] uppercase text-white px-4 py-2 rounded-md">
             <Link href='#contact'>Hire Me</Link></button>

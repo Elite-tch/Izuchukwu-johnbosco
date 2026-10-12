@@ -17,11 +17,11 @@ export default function About() {
           className="grid grid-cols-2 gap-4 w-full md:w-[45%] h-full"
         >
             <div className="bg-[#f8f9fa] dark:bg-[#111111] border border-gray-100 dark:border-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-sm">
-                <h3 className="text-4xl md:text-5xl font-bold text-[#f25c34] mb-2">3+</h3>
+                <h3 className="text-4xl md:text-5xl font-bold text-[#f25c34] mb-2">4+</h3>
                 <p className="text-sm font-medium opacity-80">Years Experience</p>
             </div>
             <div className="bg-[#f8f9fa] dark:bg-[#111111] border border-gray-100 dark:border-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-sm">
-                <h3 className="text-4xl md:text-5xl font-bold text-[#f25c34] mb-2">12+</h3>
+                <h3 className="text-4xl md:text-5xl font-bold text-[#f25c34] mb-2">25+</h3>
                 <p className="text-sm font-medium opacity-80">Shipped Products</p>
             </div>
             <div className="bg-[#f8f9fa] dark:bg-[#111111] border border-gray-100 dark:border-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-sm">
@@ -43,8 +43,8 @@ export default function About() {
         >
           <h2 className='text-[#f25c34] text-2xl font-bold mb-2'>Who I Am</h2>
           <div className='text-sm flex flex-col gap-4 opacity-90 leading-relaxed'>
-            <p>I am a passionate Frontend and Product Engineer with over three years of experience crafting high-quality web applications and robust developer tools. With a strong specialization in the Next.js ecosystem and Web3 integrations, I focus on creating intuitive user interfaces and seamless developer experiences through SDK-style abstractions.</p>
-            <p>Having successfully launched more than a dozen products, ranging from e-commerce platforms to decentralized applications, I thrive at the intersection of product design and technical execution. I am deeply committed to performance optimization.</p>
+            <p>I am a full-stack developer with over three years of experience building complete web products, from intuitive interfaces to reliable backend services, data workflows, and developer tools. I specialize in the Next.js ecosystem and turn product ideas into fast, maintainable applications.</p>
+            <p>Having launched more than a dozen products across healthcare, commerce, SaaS, and Web3, I bring product thinking and technical execution together. I care deeply about performance, usability, and creating systems that work seamlessly from the first click to the underlying data.</p>
           </div>
           <div className='flex gap-5 mt-6'>
             <a href="https://x.com/IzuchukwuJ99034?t=C0oDZva2STQieP_PRp08Gg&s=09" target="_blank" rel="noopener noreferrer">

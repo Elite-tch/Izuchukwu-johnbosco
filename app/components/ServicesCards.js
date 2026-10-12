@@ -6,29 +6,29 @@ import { motion } from 'framer-motion';
 export default function ServicesCards() {
     const cards = [
         {
-            title: "Frontend Engineering",
-            desc: "Building highly interactive, performant, and accessible web applications using Next.js, React, and modern UI libraries.",
+            title: "Full-Stack Development",
+            desc: "Building complete, high-performance web products with modern interfaces, application logic, and dependable backend services.",
             bgColor: "bg-[#f8f9fa] dark:bg-black/40",
             textColor: "text-[#1D1753] dark:text-gray-200",
             iconColor: "bg-[#f25c34]",
         },
         {
-            title: "Web3 & Blockchain ",
-            desc: "Developing dApps, integrating smart contracts with Web3.js, and handling complex wallet connection flows.",
+            title: "Backend & APIs",
+            desc: "Designing the application layer behind great products, including integrations, data flows, authentication, and real-time features.",
             bgColor: "bg-[#f25c34] dark:bg-[#f25c34]/90",
             textColor: "text-white",
             iconColor: "bg-white",
         },
         {
-            title: "Developer Tooling",
-            desc: "Creating SDK-style abstractions, interactive playgrounds, and comprehensive documentation for developer platforms.",
+            title: "Product Engineering",
+            desc: "Turning requirements into thoughtful, scalable product experiences, from early concept through launch and iteration.",
             bgColor: "bg-[#f8f9fa] dark:bg-black/40",
             textColor: "text-[#1D1753] dark:text-gray-200",
             iconColor: "bg-[#f25c34]",
         },
         {
-            title: "Full-stack Solutions",
-            desc: "Integrating reliable backend services like Firebase and Supabase for data management and real-time features.",
+            title: "Web3 Projects",
+            desc: "Delivering selected blockchain integrations and protocol interfaces where decentralization adds real product value.",
             bgColor: "bg-[#f8f9fa] dark:bg-black/40",
             textColor: "text-[#1D1753] dark:text-gray-200",
             iconColor: "bg-[#f25c34]",

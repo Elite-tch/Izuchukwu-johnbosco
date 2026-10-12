@@ -9,9 +9,9 @@ export const metadata = {
     template: "%s | Izuchukwu Johnbosco",
   },
   description:
-    "Izuchukwu Johnbosco builds modern web applications, blockchain solutions, and digital products with a focus on performance, usability, and clean engineering.",
+    "Izuchukwu Johnbosco is a full-stack developer building modern web applications and digital products with a focus on performance, usability, and clean engineering.",
   keywords:
-    "Izuchukwu Johnbosco, frontend developer, web developer, Next.js developer, React developer, Web3 developer, blockchain solutions, UI engineering, portfolio",
+    "Izuchukwu Johnbosco, full-stack developer, web developer, Next.js developer, React developer, backend developer, software engineer, portfolio",
   applicationName: "Izuchukwu Johnbosco Portfolio",
   authors: [{ name: "Izuchukwu Johnbosco", url: siteUrl }],
   creator: "Izuchukwu Johnbosco",
@@ -22,7 +22,7 @@ export const metadata = {
   openGraph: {
     title: "Izuchukwu Johnbosco | Software Developer",
     description:
-      "Frontend and Web3 developer building protocol interfaces, developer tooling, and high-performance web applications.",
+      "Full-stack developer building high-performance web applications, backend services, and thoughtful digital products.",
     url: siteUrl,
     siteName: "Izuchukwu Johnbosco",
     images: [
@@ -39,7 +39,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Izuchukwu Johnbosco | Software Developer",
     description:
-      "Expert web development and blockchain integration services tailored for modern businesses.",
+      "Full-stack web development services tailored for modern businesses.",
     creator: "@JBTechSolutions",
     images: ["/logo1.png"],
   },
@@ -67,9 +67,10 @@ export default function RootLayout({ children }) {
       "Next.js",
       "React",
       "TypeScript",
-      "Web3",
-      "Blockchain Development",
-      "Frontend Engineering",
+      "Full-Stack Development",
+      "Backend Development",
+      "API Integration",
+      "Database Design",
     ],
   };
 
