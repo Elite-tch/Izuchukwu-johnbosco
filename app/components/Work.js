@@ -26,7 +26,7 @@ const allProjects = [
   {
     title: 'Inkwell Studio',
     category: 'fullstack',
-    video:"  https://res.cloudinary.com/dibwnfwk9/video/upload/v1791786403/galway_psolzj.mp4",
+    video: 'https://res.cloudinary.com/dibwnfwk9/video/upload/v1791786403/galway_psolzj.mp4',
     live: 'https://tattoos-studio.vercel.app/',
     description: 'A refined, conversion-focused website for a Dublin tattoo and piercing studio, presenting custom artwork, studio services, booking pathways, gallery content, and location details in an immersive visual experience.',
     role: 'Built the responsive marketing experience, service discovery and conversion-focused booking journey.',
@@ -48,7 +48,7 @@ const allProjects = [
   {
     title: 'MEDNORIS Waitlist',
     category: 'fullstack',
-    video: 'https://res.cloudinary.com/dibwnfwk9/image/upload/v1791790061/Screenshot_2026-10-12_074405_ogcun1.png',
+    image: 'https://res.cloudinary.com/dibwnfwk9/image/upload/v1791790061/Screenshot_2026-10-12_074405_ogcun1.png',
     live: 'https://mednoris-waitlist.vercel.app/',
     description: 'A launch-ready waitlist experience for MEDNORIS, introducing patient-controlled records, verified doctor access, and secure permission-based care through a clear, confidence-building product story.',
     role: 'Designed and built the responsive launch experience and waitlist conversion flow.',
@@ -86,7 +86,7 @@ const allProjects = [
   {
     title: 'FlareStudio',
     category: 'web3',
-    video: 'https://res.cloudinary.com/dibwnfwk9/image/upload/v1791790432/lin_z7kw6s.png',
+    image: 'https://res.cloudinary.com/dibwnfwk9/image/upload/v1791790432/lin_z7kw6s.png',
     live: 'https://www.flarestudio.xyz/',
     description: 'Developer toolkit and interactive playground for the Flare Network. Built as a multi-feature developer platform for exploring, learning, and building on the Flare blockchain. Includes dashboards, analytics, interactive RPC testing, and the ProofRails SDK for ISO 20022 compliant receipts.',
     tech: ['Next.Js', 'JavaScript', 'SDK', 'Flare Network'],
@@ -169,11 +169,15 @@ export default function WorkPage() {
         className='flex flex-col gap-5 md:w-[100%] bg-gray-100 dark:bg-gray-900 px-5 pb-6 pt-5 rounded-md shadow-sm hover:shadow-md transition-shadow'
       >
         {project.video ? (
-          <div className="rounded-md overflow-hidden bg-white flex items-center justify-center  ">
-            <video className="md:h- w-full object-center" autoPlay muted loop playsInline>
+          <div className="rounded-md overflow-hidden bg-black flex items-center justify-center min-h-[200px] md:h-80">
+            <video className="h-full w-full object-cover" autoPlay muted loop playsInline>
               <source src={project.video} type="video/mp4"  />
               Your browser does not support the video tag.
             </video>
+          </div>
+        ) : project.image ? (
+          <div className="rounded-md overflow-hidden bg-gray-200 min-h-[200px] md:h-80">
+            <img src={project.image} alt={`${project.title} project preview`} className="h-full w-full object-cover object-top" />
           </div>
         ) : (
           <div className={`relative overflow-hidden min-h-[200px] md:h-80 p-6 md:p-8 flex flex-col justify-between text-white ${
